@@ -1,6 +1,5 @@
-const {merge} = require('webpack-merge');
-const {baseConfig} = require('./webpack.base.conf')
-
+const { merge } = require('webpack-merge');
+const { baseConfig } = require('./webpack.base.conf');
 
 module.exports = merge(baseConfig, {
   mode: 'development',
@@ -9,6 +8,6 @@ module.exports = merge(baseConfig, {
     host: '0.0.0.0',
     port: 9000,
     hot: true,
-    open: false
+    open: false,
   },
-})
+});
