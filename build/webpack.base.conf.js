@@ -1,20 +1,22 @@
+const defaultSettings = require('../src/settings.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
 const path = require('path');
+const { DefinePlugin } = require("webpack");
 const resolvePath = (_path) => path.resolve(__dirname, _path);
 
 const baseConfig = {
   entry: resolvePath('../src/main.js'),
   output: {
     filename: 'bundle-[name].js',
-    path: resolvePath('../dist1'), // 输出的文件地址
-    publicPath: '',
+    path: resolvePath('../dist'), // 输出的文件地址
+    publicPath: defaultSettings.baseUrl,
   },
   resolve: {
-    // extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue'],
     alias: {
       '@': resolvePath('../src'),
     },
@@ -30,6 +32,10 @@ const baseConfig = {
     }),
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),
+    new DefinePlugin({
+      __VUE_OPTIONS_API__: JSON.stringify(true),
+      __VUE_PROD_DEVTOOLS__: JSON.stringify(false)
+    })
   ],
   module: {
     rules: [
