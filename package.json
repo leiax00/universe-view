@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-i18n": "^8.26.5",
+    "vue-router": "^3.5.2",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -33,7 +36,7 @@
     "postcss-loader": "^6.2.0",
     "sass": "^1.43.2",
     "sass-loader": "^12.2.0",
-    "vue-loader-v16": "^16.8.1",
+    "vue-loader": "16.8.1",
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
     "webpack-dev-server": "^4.3.1",

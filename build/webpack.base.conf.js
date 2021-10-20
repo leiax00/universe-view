@@ -1,7 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const { VueLoaderPlugin } = require('vue-loader-v16');
+const { VueLoaderPlugin } = require('vue-loader');
 
 const path = require('path');
 const resolvePath = (_path) => path.resolve(__dirname, _path);
@@ -39,7 +39,7 @@ const baseConfig = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader-v16',
+        loader: 'vue-loader',
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
