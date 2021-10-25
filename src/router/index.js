@@ -1,11 +1,12 @@
 import {createRouter, createWebHistory} from "vue-router";
 import NProcess from 'nprogress';
 import 'nprogress/nprogress.css';
+import commonRoutes from "@/router/commonRoutes";
 
 const newRouter = () => {
     return createRouter({
         history: createWebHistory(import.meta.env.VITE_APP_PREFIX),
-        routes: []
+        routes: commonRoutes
     })
 };
 
@@ -16,7 +17,7 @@ export function resetRouter() {
     router.matcher = newRouter.matcher; // reset router
 }
 
-router.beforeEach(async(to, from, next) => {
+router.beforeEach(async (to, from, next) => {
     NProcess.start();
     document.title = import.meta.env.VITE_APP_TITLE;
     next();

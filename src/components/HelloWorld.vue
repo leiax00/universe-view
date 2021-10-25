@@ -1,12 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+withDefaults(defineProps<{ msg?: string }>(), {
+  msg: 'Hello Vue 3  + Vite'
+})
 
 const count = ref(0)
 </script>
 
 <template>
+  <img alt="Vue logo" src="@/assets/images/logo.png" />
   <h1>{{ msg }}</h1>
 
   <p>
