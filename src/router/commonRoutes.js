@@ -1,3 +1,5 @@
+import i18n from "@/components/i18n";
+
 const commonRoutes = [
   {path: '/', name: 'tmp redirect', redirect: '/hello'},
   {
@@ -7,12 +9,12 @@ const commonRoutes = [
       {
         path: 'index',
         component: () => import(/* webpackChunkName: "user" */ '@/views/Home'),
-        meta: {title: '首页', roles: []},
+        meta: {title: i18n.global.t('title.home'), roles: []},
       },
       {
         path: 'hello',
         component: () => import(/* webpackChunkName: "user" */ '@/components/HelloWorld'),
-        meta: {title: 'Hello World', roles: []},
+        meta: {title: i18n.global.t('title.hello_world'), roles: []},
       },
     ],
   },

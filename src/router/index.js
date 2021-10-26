@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from "vue-router";
 import NProcess from 'nprogress';
 import 'nprogress/nprogress.css';
 import commonRoutes from "@/router/commonRoutes";
+import {getTitle} from "@/utils";
 
 const newRouter = () => {
     return createRouter({
@@ -19,7 +20,7 @@ export function resetRouter() {
 
 router.beforeEach(async (to, from, next) => {
     NProcess.start();
-    document.title = import.meta.env.VITE_APP_TITLE;
+    document.title = getTitle(to.meta.title);
     next();
 });
 

@@ -11,10 +11,12 @@
   "dependencies": {
     "nprogress": "^0.2.0",
     "vue": "^3.2.16",
+    "vue-i18n": "^9.1.9",
     "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^2.4.0",
     "@types/node": "^16.11.1",
     "@vitejs/plugin-vue": "^1.9.3",
     "@vitejs/plugin-vue-jsx": "^1.2.0",
