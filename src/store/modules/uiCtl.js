@@ -7,6 +7,10 @@ const state = {
     version: defaultSettings.version,
     baseUrl: defaultSettings.baseUrl,
   },
+  auth: {
+    token: '',
+    user: {}
+  }
 };
 
 const mutations = {
@@ -17,9 +21,18 @@ const mutations = {
 
 const actions = {};
 
+const getters = {
+  roleChange: state => {
+    // todo: 根据用户角色的变化进行设置该值
+    return true
+  },
+  auth: state => state.auth
+}
+
 export default {
   namespaced: true,
   state,
+  getters,
   mutations,
   actions,
 };

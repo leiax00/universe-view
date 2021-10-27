@@ -1,6 +1,6 @@
 import i18n from "@/components/i18n";
 
-const commonRoutes = [
+export const routes = [
   {path: '/', name: 'tmp redirect', redirect: '/hello'},
   {
     path: '/',
@@ -14,6 +14,11 @@ const commonRoutes = [
       {
         path: 'hello',
         component: () => import(/* webpackChunkName: "user" */ '@/components/HelloWorld'),
+        meta: {title: i18n.global.t('title.hello_world'), roles: []},
+      },
+      {
+        path: 'login',
+        component: () => import(/* webpackChunkName: "user" */ '@/views/Home'),
         meta: {title: i18n.global.t('title.hello_world'), roles: []},
       },
     ],
@@ -31,4 +36,5 @@ const commonRoutes = [
   {path: '/:pathMatch(.*)*', name: 'not-found', redirect: '/404'},
 ]
 
-export default commonRoutes
+export const asyncRoutes = []
+
