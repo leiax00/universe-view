@@ -10,6 +10,54 @@ parserOptions:
 plugins:
   - vue
 rules:
+  no-console: warn
+  no-dupe-keys: error
+  no-extra-parens: error
+  no-extra-semi: error
+  no-invalid-regexp: error
+  no-irregular-whitespace: warn
+  no-unreachable: warn
+  no-unsafe-finally: error
+  block-scoped-var: error
+  default-case: error
+  dot-location:
+    - error
+    - property
+  dot-notation: warn
+  eqeqeq: error
+  no-empty-function: error
+  no-empty-pattern: error
+  no-invalid-this: error
+  no-multi-spaces: error
+  no-unused-vars:
+    - warn
+    - vars: all
+      args: none
+  no-use-before-define:
+    - off
+    - functions: false
+      classes: true
+#  风格规则
+  array-bracket-spacing:
+    - error
+    - always
+    - objectsInArrays: false
+      arraysInArrays: false
+  array-element-newline: [error, consistent]
+  block-spacing: [error, always]
+  brace-style: error
+  camelcase: warn
+  comma-dangle: [error, only-multiline]
+  comma-spacing: error
+  comma-style: [error, last]
+  computed-property-spacing: [error, never]
+  eol-last:
+    - error
+    - never
+  func-call-spacing: [error, never]
+  function-paren-newline:
+    - error
+    - minItems: 5
   indent:
     - error
     - 2
@@ -22,3 +70,33 @@ rules:
   semi:
     - error
     - always
+  key-spacing:
+    - error
+    - beforeColon: false
+  keyword-spacing:
+    - error
+    - before: true
+      after: true
+  max-depth: [error, 4]
+  max-len:
+    - error
+    - code: 100
+      tabWidth: 2
+  max-lines: [error, 300]
+  max-lines-per-function: [error, 50]
+  no-lonely-if: error
+  no-mixed-spaces-and-tabs: error
+  no-multiple-empty-lines: error
+  no-nested-ternary: error
+  no-tabs: error
+  no-trailing-spaces: error
+  object-curly-newline:
+    - error
+    - multiline: true
+  object-curly-spacing:
+    - error
+    - always
+    - objectsInObjects: false
+  space-before-blocks: [error, always]
+  space-before-function-paren: [error, never]
+  no-var: error

@@ -3,9 +3,7 @@
 </template>
 
 <script>
-export default {
-  name: 'Page403',
-};
+export default { name: 'Page403' };
 </script>
 
 <style scoped>

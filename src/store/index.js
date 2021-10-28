@@ -1,6 +1,6 @@
-import {createStore} from 'vuex';
+import { createStore } from 'vuex';
 import getters from './getters';
-import {batchParseJsFile} from '@/utils';
+import { batchParseJsFile } from '@/utils';
 
 const modules = batchParseJsFile(import.meta.globEager('./modules/*.js'));
 

@@ -1,8 +1,8 @@
-import {createRouter, createWebHistory} from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 import NProcess from 'nprogress';
 import 'nprogress/nprogress.css';
 import { routes } from '@/router/routes';
-import {getTitle} from '@/utils';
+import { getTitle } from '@/utils';
 import auth from '@/router/auth';
 
 const newRouter = () => {
@@ -19,7 +19,7 @@ export function resetRouter() {
   router.matcher = newRouter.matcher; // reset router
 }
 
-router.beforeEach(async (to, from, next) => {
+router.beforeEach(async(to, from, next) => {
   NProcess.start();
   document.title = getTitle(to.meta.title);
   auth.withEach(to, from, next).tryTo();

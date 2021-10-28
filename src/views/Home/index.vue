@@ -9,7 +9,7 @@
 export default {
   name: 'Home',
   methods: {
-    onClick: function (e) {
+    onClick: function(e) {
       this.$store.commit('uiCtl/CHANGE_SIDE_SHOW');
     }
   }

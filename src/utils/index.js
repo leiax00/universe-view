@@ -2,7 +2,7 @@ export function getTitle(title) {
   if (isEmptyStr(title)) {
     return import.meta.env.VITE_APP_TITLE;
   }
-  return  `${import.meta.env.VITE_APP_TITLE} - ${title}`;
+  return `${import.meta.env.VITE_APP_TITLE} - ${title}`;
 }
 
 export function isEmptyStr(str) {

@@ -1,6 +1,6 @@
-import {defineConfig, loadEnv} from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import {vueI18n} from '@intlify/vite-plugin-vue-i18n';
+import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
 const path = require('path');
 
 const resolvePath = (_path) => path.resolve(__dirname, _path);
@@ -18,10 +18,8 @@ export default ({ mode }) => {
     base: contextPath(mode),
     build: {},
     resolve: {
-      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.vue'],
-      alias: {
-        '@': resolvePath('src'),
-      },
+      extensions: [ '.js', '.jsx', '.ts', '.tsx', '.json', '.vue' ],
+      alias: { '@': resolvePath('src') },
     },
     plugins: [
       vue(),
