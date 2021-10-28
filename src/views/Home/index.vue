@@ -7,13 +7,13 @@
 
 <script>
 export default {
-  name: "Home",
+  name: 'Home',
   methods: {
     onClick: function (e) {
-      this.$store.commit('uiCtl/CHANGE_SIDE_SHOW')
+      this.$store.commit('uiCtl/CHANGE_SIDE_SHOW');
     }
   }
-}
+};
 </script>
 
 <style scoped>

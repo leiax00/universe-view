@@ -1,4 +1,4 @@
-import i18n from "@/components/i18n";
+import i18n from '@/components/i18n';
 
 export const routes = [
   {path: '/', name: 'tmp redirect', redirect: '/hello'},
@@ -34,7 +34,7 @@ export const routes = [
     hidden: true,
   },
   {path: '/:pathMatch(.*)*', name: 'not-found', redirect: '/404'},
-]
+];
 
-export const asyncRoutes = []
+export const asyncRoutes = [];
 

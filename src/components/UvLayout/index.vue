@@ -7,8 +7,8 @@
 
 <script>
 export default {
-  name: "UvLayout"
-}
+  name: 'UvLayout'
+};
 </script>
 
 <style scoped>

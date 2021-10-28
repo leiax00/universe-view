@@ -1,5 +1,5 @@
 export default {
-    title: '',
-    version: '',
-    baseUrl: '',
+  title: '',
+  version: '',
+  baseUrl: '',
 };
