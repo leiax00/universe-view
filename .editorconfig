@@ -1,38 +1,22 @@
+# EditorConfig is awesome: https://editorconfig.org/
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
 [*]
-charset=utf-8
-end_of_line=lf
-insert_final_newline=false
-indent_style=space
-indent_size=2
+indent_style = space
+indent_size = 2
+tab_width = 2
+end_of_line = lf
+charset = utf-8
+insert_final_newline = false
+max_line_length = 100
 
-[{*.ng,*.sht,*.html,*.shtm,*.shtml,*.htm}]
-indent_style=space
-indent_size=2
+[*.md]
+trim_trailing_whitespace = false
 
-[{*.jhm,*.xslt,*.xul,*.rng,*.xsl,*.xsd,*.ant,*.tld,*.fxml,*.jrxml,*.xml,*.jnlp,*.wsdl}]
-indent_style=space
-indent_size=2
+[*.js]
+trim_trailing_whitespace = true
 
-[{.babelrc,.stylelintrc,jest.config,.eslintrc,.prettierrc,*.json,*.jsb3,*.jsb2,*.bowerrc}]
-indent_style=space
-indent_size=2
 
-[*.svg]
-indent_style=space
-indent_size=2
-
-[*.js.map]
-indent_style=space
-indent_size=2
-
-[*.less]
-indent_style=space
-indent_size=2
-
-[*.vue]
-indent_style=space
-indent_size=2
-
-[{.analysis_options,*.yml,*.yaml}]
-indent_style=space
-indent_size=2
