@@ -21,3 +21,9 @@ export function batchParseJsFile(fileList, callback) {
     return target;
   }, {});
 }
+
+export function kvObject2UriParam(paramObj) {
+  return Object.entries(paramObj).map(([ k, v ]) => {
+    return `${k}=${encodeURIComponent(v)}`;
+  }).join('&');
+}
