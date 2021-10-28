@@ -1,4 +1,4 @@
-import i18n from '@/components/i18n';
+import {i18n} from '@/utils/domain';
 
 export const routes = [
   {path: '/', name: 'tmp redirect', redirect: '/hello'},
