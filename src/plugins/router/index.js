@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import NProcess from 'nprogress'
 import 'nprogress/nprogress.css'
-import { routes } from '@/router/routes'
+import { routes } from '@/plugins/router/routes'
 import { getTitle } from '@/utils'
-import auth from '@/router/auth'
+import auth from '@/plugins/router/auth'
 
 const newRouter = () => {
   return createRouter({

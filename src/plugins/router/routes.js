@@ -1,4 +1,4 @@
-import { i18n } from '@/utils/domain'
+import { i18n } from '@/plugins/vueI18n'
 
 export const routes = [
   { path: '/', name: 'tmp redirect', redirect: '/hello' },
