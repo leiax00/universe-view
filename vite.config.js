@@ -1,16 +1,17 @@
-import { defineConfig, loadEnv } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import { vueI18n } from '@intlify/vite-plugin-vue-i18n';
-const path = require('path');
+import { defineConfig, loadEnv } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vuetify from '@vuetify/vite-plugin'
+import path from 'path'
+import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 
-const resolvePath = (_path) => path.resolve(__dirname, _path);
+const resolvePath = (_path) => path.resolve(__dirname, _path)
 const contextPath = (mode) => {
-  const context = loadEnv(mode, process.cwd()).VITE_APP_PREFIX;
+  const context = loadEnv(mode, process.cwd()).VITE_APP_PREFIX
   if (context && context !== '' && context !== '/') {
-    return `/${context}/`;
+    return `/${context}/`
   }
-  return '/';
-};
+  return '/'
+}
 
 // https://vitejs.dev/config/
 export default ({ mode }) => {
@@ -27,7 +28,12 @@ export default ({ mode }) => {
         compositionOnly: false,
         // defaultSFCLang: 'yml',
         include: resolvePath('./**/lang/**')
-      })
+      }),
+      // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
+      vuetify({
+        autoImport: true,
+        styles: 'expose',
+      }),
     ]
-  });
-};
+  })
+}

@@ -31,7 +31,12 @@ rules:
     - property
   dot-notation: warn
   eqeqeq: error
-  no-empty-function: error
+  no-empty-function:
+    - error
+    - allow: [arrowFunctions]
+  '@typescript-eslint/no-empty-function':
+    - error
+    - allow: [arrowFunctions]
   no-empty-pattern: error
   no-invalid-this: error
   no-multi-spaces: error
@@ -75,7 +80,7 @@ rules:
     - single
   semi:
     - error
-    - always
+    - never
   key-spacing:
     - error
     - beforeColon: false
@@ -95,10 +100,13 @@ rules:
   no-multiple-empty-lines: error
   no-nested-ternary: error
   no-tabs: error
-  no-trailing-spaces: error
+  no-trailing-spaces:
+    - error
+    - skipBlankLines: true
+      ignoreComments: true
   object-curly-newline:
     - error
-    - multiline: true
+    - consistent: true
   object-curly-spacing:
     - error
     - always

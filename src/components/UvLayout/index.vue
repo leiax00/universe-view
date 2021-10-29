@@ -6,7 +6,7 @@
 </template>
 
 <script>
-export default { name: 'UvLayout' };
+export default { name: 'UvLayout' }
 </script>
 
 <style scoped>

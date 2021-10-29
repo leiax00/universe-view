@@ -1,7 +1,9 @@
 <template>
   <div class="home-main">
     Home - main
-    <button type="button" @click="onClick">点击我</button>
+    <v-btn block>
+      Block Button
+    </v-btn>
   </div>
 </template>
 
@@ -10,10 +12,10 @@ export default {
   name: 'Home',
   methods: {
     onClick: function(e) {
-      this.$store.commit('uiCtl/CHANGE_SIDE_SHOW');
+      this.$store.commit('uiCtl/CHANGE_SIDE_SHOW')
     }
   }
-};
+}
 </script>
 
 <style scoped>

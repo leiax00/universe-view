@@ -1,4 +1,4 @@
-import { i18n } from '@/utils/domain';
+import { i18n } from '@/utils/domain'
 
 export const routes = [
   { path: '/', name: 'tmp redirect', redirect: '/hello' },
@@ -34,6 +34,6 @@ export const routes = [
     hidden: true,
   },
   { path: '/:pathMatch(.*)*', name: 'not-found', redirect: '/404' },
-];
+]
 
-export const asyncRoutes = [];
+export const asyncRoutes = []

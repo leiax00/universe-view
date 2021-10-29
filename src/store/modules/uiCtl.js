@@ -1,4 +1,4 @@
-import defaultSettings from '@/settings';
+import defaultSettings from '@/settings'
 
 const state = {
   showSide: false,
@@ -11,23 +11,23 @@ const state = {
     token: '',
     user: {}
   }
-};
+}
 
 const mutations = {
   CHANGE_SIDE_SHOW: (state) => {
-    state.showSide = !state.showSide;
+    state.showSide = !state.showSide
   }
-};
+}
 
-const actions = {};
+const actions = {}
 
 const getters = {
   roleChange: state => {
     // todo: 根据用户角色的变化进行设置该值
-    return true;
+    return true
   },
   auth: state => state.auth
-};
+}
 
 export default {
   namespaced: true,
@@ -35,4 +35,4 @@ export default {
   getters,
   mutations,
   actions,
-};
+}
