@@ -1,6 +1,7 @@
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/dist/vuetify.css'
+import store from '../store'
 
 // Vuetify
 import { createVuetify, ThemeDefinition } from 'vuetify/dist/vuetify'
@@ -35,7 +36,7 @@ export default createVuetify({
   //   },
   // },
   theme: {
-    defaultTheme: 'self',
+    defaultTheme: store.getters.settings.app.theme,
     themes: {
       self
     }

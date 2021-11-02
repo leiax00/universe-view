@@ -1,8 +1,12 @@
 app:
-  title: ''
-  version: ''
+  title: 'Universe-View'
+  version: 'v0.0.1'
   baseUrl: ''
-  theme: ''
+  theme: 'self'
+#  看板娘模型选择, 参见: https://github.com/fghrsh/live2d_api
+  cute:
+    textures: 0
+    model: 4
 header:
   menu:
     - name: 'title.home'

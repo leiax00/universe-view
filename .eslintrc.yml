@@ -93,7 +93,7 @@ rules:
     - error
     - code: 120
       tabWidth: 2
-  max-lines: [error, 300]
+  max-lines: [warn, 300]
   max-lines-per-function: [error, 50]
   no-lonely-if: error
   no-mixed-spaces-and-tabs: error
