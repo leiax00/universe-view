@@ -1,7 +1,7 @@
 const getters = {
-  rootApp: state => state.uiCtl.rootApp,
-  settings: state => state.uiCtl.settings,
-  showSide: state => state.uiCtl.showSide,
+  rootApp: state => state.app.rootApp,
+  settings: state => state.app.settings,
+  showSide: state => state.app.showSide,
 }
 
 export default getters

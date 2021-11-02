@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-btn block>aaaaaaaaaaaaa</v-btn>
+    <v-btn flat>aaaaaaaaaaaaa</v-btn>
     <v-row class="text-center">
       <v-col cols="12">
         <v-img

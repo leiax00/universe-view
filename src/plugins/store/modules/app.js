@@ -1,12 +1,7 @@
-import defaultSettings from '@/settings'
-
+import settings from '@/settings.yaml'
 const state = {
   showSide: false,
-  settings: {
-    title: defaultSettings.title,
-    version: defaultSettings.version,
-    baseUrl: defaultSettings.baseUrl,
-  },
+  settings: settings,
   auth: {
     token: '',
     user: {}

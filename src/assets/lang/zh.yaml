@@ -2,4 +2,11 @@ common:
   ok: OK
 title:
   home: 首页
-  hello_world: 你好, 世界!
+  archive: 归档
+  classify: 分类
+  tag: 标签
+  audio: 影音
+  photo: 相册
+  thoughts: 碎碎念
+  message: 留言
+  about: 关于

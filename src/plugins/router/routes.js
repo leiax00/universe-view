@@ -13,13 +13,13 @@ export const routes = [
       },
       {
         path: 'hello',
-        component: () => import(/* webpackChunkName: "user" */ '@/components/HelloWorld'),
-        meta: { title: i18n.global.t('title.hello_world'), roles: [] },
+        component: () => import(/* webpackChunkName: "user" */ '@/views/HelloWorld'),
+        meta: { title: i18n.global.t('title.home'), roles: [] },
       },
       {
         path: 'login',
         component: () => import(/* webpackChunkName: "user" */ '@/views/Home'),
-        meta: { title: i18n.global.t('title.hello_world'), roles: [] },
+        meta: { title: i18n.global.t('title.home'), roles: [] },
       },
     ],
   },

@@ -3,6 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import vuetify from '@vuetify/vite-plugin'
 import path from 'path'
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
+// 加载yaml/xml/xlsx/ini/toml/csv/plist/properties等
+import content from '@originjs/vite-plugin-content'
 
 const resolvePath = (_path) => path.resolve(__dirname, _path)
 const contextPath = (mode) => {
@@ -16,11 +18,19 @@ const contextPath = (mode) => {
 // https://vitejs.dev/config/
 export default ({ mode }) => {
   return defineConfig({
+    esbuild: {
+      jsxFactory: 'h',
+      jsxFragment: 'Fragment',
+      jsxInject: 'import { h } from "vue";'
+    },
     base: contextPath(mode),
     build: {},
     resolve: {
       extensions: [ '.js', '.jsx', '.ts', '.tsx', '.json', '.vue' ],
-      alias: { '@': resolvePath('src') },
+      alias: {
+        '@': resolvePath('src'),
+        '~@': resolvePath('src'),
+      },
     },
     plugins: [
       vue(),
@@ -32,8 +42,9 @@ export default ({ mode }) => {
       // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
       vuetify({
         autoImport: true,
-        styles: 'expose',
+        styles: 'none',
       }),
+      content()
     ]
   })
 }

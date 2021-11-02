@@ -1,12 +1,15 @@
 <template>
   <div class="layout-main">
-    uv - layout
-    <router-view />
+    <common-layout />
   </div>
 </template>
 
-<script>
-export default { name: 'UvLayout' }
+<script type="text/tsx">
+import CommonLayout from './CommonLayout/index.vue'
+export default {
+  name: 'UvLayout',
+  components: { CommonLayout },
+}
 </script>
 
 <style scoped>
