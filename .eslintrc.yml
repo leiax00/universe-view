@@ -18,7 +18,7 @@ plugins:
 rules:
   no-console: warn
   no-dupe-keys: error
-  no-extra-parens: error
+  no-extra-parens: off
   no-extra-semi: error
   no-invalid-regexp: error
   no-irregular-whitespace: warn
@@ -37,6 +37,7 @@ rules:
   '@typescript-eslint/no-empty-function':
     - error
     - allow: [arrowFunctions]
+  '@typescript-eslint/no-explicit-any': off
   no-empty-pattern: error
   no-invalid-this: error
   no-multi-spaces: error

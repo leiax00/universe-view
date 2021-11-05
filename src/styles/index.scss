@@ -1,12 +1,11 @@
-@use "variables";
-@use "mixins" as mixins;
+@forward './settings';
+@use './generic';
+@use './elements';
+@use './utilities';
+
 body {
   & {
     #app {
-      a {
-        cursor: pointer;
-        text-decoration: none;
-      }
     }
   }
 }
