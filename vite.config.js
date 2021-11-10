@@ -4,6 +4,8 @@ import path from 'path'
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 // 加载yaml/xml/xlsx/ini/toml/csv/plist/properties等
 import content from '@originjs/vite-plugin-content'
+import Components from 'unplugin-vue-components/vite'
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 
 const resolvePath = (_path) => path.resolve(__dirname, _path)
 const contextPath = (mode) => {
@@ -38,7 +40,11 @@ export default ({ mode }) => {
         // defaultSFCLang: 'yml',
         include: resolvePath('./**/lang/**')
       }),
-      content()
+      content(),
+      Components({
+        resolvers: [ AntDesignVueResolver() ],
+        exclude: [ /[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/ ],
+      }),
     ]
   })
 }

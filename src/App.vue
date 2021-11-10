@@ -1,6 +1,5 @@
 <template>
   <div ref="app" :class="appClazz">
-    <div class="text-red-lighten-2 elevation-7">asdasfaf</div>
     <router-view/>
   </div>
 </template>

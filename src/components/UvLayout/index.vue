@@ -1,6 +1,7 @@
 <template>
   <div class="layout-main">
     <common-layout />
+    <little-cute />
   </div>
 </template>
 

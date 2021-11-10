@@ -38,6 +38,7 @@ rules:
     - error
     - allow: [arrowFunctions]
   '@typescript-eslint/no-explicit-any': off
+  '@typescript-eslint/no-this-alias': off
   no-empty-pattern: error
   no-invalid-this: error
   no-multi-spaces: error

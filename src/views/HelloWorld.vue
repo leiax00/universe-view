@@ -10,6 +10,7 @@ const count = ref(0)
 
 <template>
   <div class="text-center">
+    <a-button type="primary">Primary Button</a-button>
     <img alt="Vue logo" src="@/assets/images/logo.svg" style="height: 128px; width: 128px"/>
     <h1>{{ msg }}</h1>
 
