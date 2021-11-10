@@ -1,7 +1,10 @@
 import settings from '@/settings.yaml'
+import { themeManager } from '@/utils/theme'
+
 const state = {
   showSide: false,
   settings: settings,
+  themeManager: themeManager.fillCtx({ themeList: settings.define.theme }),
   auth: {
     token: '',
     user: {}

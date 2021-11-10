@@ -2,9 +2,7 @@
   <div class="common-layout">
     <uv-header />
     <router-view />
-    <div id="little_cute" class="uv_little_cute">
-      <little-cute />
-    </div>
+    <little-cute />
   </div>
 </template>
 
@@ -19,14 +17,5 @@ export default {
 
 <style lang="scss" scoped>
 .common-layout {
-  .uv_little_cute {
-    position: fixed;
-    width: 250px;
-    height: 350px;
-    bottom: 0;
-    z-index: 10000;
-    right: 0.75rem;
-    transition: all 0.3s ease-in-out 0s;
-  }
 }
 </style>

@@ -2,7 +2,9 @@ app:
   title: 'Universe-View'
   version: 'v0.0.1'
   baseUrl: ''
-  theme: 'self'
+  theme:
+    select: base
+    needCache: true
 #  看板娘模型选择, 参见: https://github.com/fghrsh/live2d_api
   cute:
     textures: 0
@@ -27,3 +29,39 @@ header:
       path: /
     - name: 'title.about'
       path: /
+
+define:
+  theme:
+    - name: default
+      vars:
+        --v-theme-color: '#e0e0e0'
+        --v-theme-background: '#2f2f2f'
+        --v-theme-margin: 1rem
+        --v-theme-padding: 1rem
+      responsive:
+        xs:
+          min: 0
+          max: 600
+          vars:
+            --common-margin: 24px
+        sm:
+          min: 600
+          max: 960
+          vars:
+        md:
+          min: 960
+          max: 1280
+          vars:
+        lg:
+          min: 1280
+          max: 1920
+          vars:
+        xl:
+          min: 1920
+          max: 2560
+          vars:
+        xxl:
+          min: 2560
+          max: 10000
+          vars:
+
