@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vuetify from '@vuetify/vite-plugin'
 import path from 'path'
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 // 加载yaml/xml/xlsx/ini/toml/csv/plist/properties等
@@ -37,6 +38,11 @@ export default ({ mode }) => {
         compositionOnly: false,
         // defaultSFCLang: 'yml',
         include: resolvePath('./**/lang/**')
+      }),
+      // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
+      vuetify({
+        autoImport: true,
+        styles: 'none',
       }),
       content()
     ]

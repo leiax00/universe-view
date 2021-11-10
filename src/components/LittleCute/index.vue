@@ -1,5 +1,5 @@
 <template>
-  <div id="waifu">
+  <div id="waifu" style="position: absolute;top: 50px;">
     <div id="waifu-tips"/>
     <canvas id="live2d" width="800" height="800"/>
     <div id="waifu-tool">
@@ -68,6 +68,7 @@ export default {
     devtool() {
       const devtools = () => {
       }
+      console.log('%c', devtools)
       devtools.toString = () => {
         this.showMessage('哈哈，你打开了控制台，是想要看看我的小秘密吗？', 6000, 9)
       }
@@ -173,6 +174,7 @@ export default {
       this.showMessage(message, 4000, 10)
       if (!this.modelList) await this.loadModelList()
       const target = this.randomSelection(this.modelList.models[modelId])
+      console.log(this.cdnPath)
       window.loadlive2d('live2d', `${this.cdnPath}model/${target}/index.json`)
     },
     async loadRandModel() {
@@ -187,16 +189,46 @@ export default {
       let modelId = localStorage.getItem('modelId')
       if (!this.modelList) await this.loadModelList()
       const index = ++modelId >= this.modelList.models.length ? 0 : modelId
-      await this.loadModel(index, 0, this.modelList.messages[index])
+      console.log(this.modelList)
+      this.loadModel(index, 0, this.modelList.messages[index])
     },
   },
 }
 </script>
 
 <style scoped="scoped">
+#waifu-toggle {
+  background-color: #fa0;
+  border-radius: 5px;
+  bottom: 66px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  left: 0;
+  margin-left: -100px;
+  padding: 5px 2px 5px 5px;
+  position: fixed;
+  transition: margin-left 1s;
+  width: 60px;
+  writing-mode: vertical-rl;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#waifu-toggle.waifu-toggle-active {
+  margin-left: -50px;
+}
+
+#waifu-toggle.waifu-toggle-active:hover {
+  margin-left: -30px;
+}
 
 #waifu {
-  right: 0.75rem;
+  right: 0;
   bottom: 0;
   line-height: 0;
   position: fixed;

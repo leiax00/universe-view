@@ -406,6 +406,11 @@
     "@intlify/runtime" "9.1.9"
     "@intlify/shared" "9.1.9"
 
+"@mdi/font@5.9.55":
+  version "5.9.55"
+  resolved "https://registry.npmmirror.com/@mdi/font/download/@mdi/font-5.9.55.tgz#41acd50b88073ded7095fc3029d8712b6e12f38e"
+  integrity sha1-QazVC4gHPe1wlfwwKdhxK24S844=
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.nlark.com/@nodelib/fs.scandir/download/@nodelib/fs.scandir-2.1.5.tgz"
@@ -1050,6 +1055,21 @@
   resolved "https://registry.npm.taobao.org/@vue/web-component-wrapper/download/@vue/web-component-wrapper-1.3.0.tgz#b6b40a7625429d2bd7c2281ddba601ed05dc7f1a"
   integrity sha1-trQKdiVCnSvXwigd26YB7QXcfxo=
 
+"@vuetify/loader-shared@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.npmmirror.com/@vuetify/loader-shared/download/@vuetify/loader-shared-1.1.3.tgz#74aee7de391742606647cf77422d3f6e07698a4b"
+  integrity sha1-dK7n3jkXQmBmR893Qi0/bgdpiks=
+  dependencies:
+    find-cache-dir "^3.3.2"
+    upath "^2.0.1"
+
+"@vuetify/vite-plugin@^1.0.0-alpha.3":
+  version "1.0.0-alpha.5"
+  resolved "https://registry.npmmirror.com/@vuetify/vite-plugin/download/@vuetify/vite-plugin-1.0.0-alpha.5.tgz#ad4e18720db7a6eccc765587a4d1d7b00a5cfee9"
+  integrity sha1-rU4Ycg23puzMdlWHpNHXsApc/uk=
+  dependencies:
+    "@vuetify/loader-shared" "^1.1.3"
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.nlark.com/@webassemblyjs/ast/download/@webassemblyjs/ast-1.11.1.tgz?cache=0&sync_timestamp=1625473420080&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40webassemblyjs%2Fast%2Fdownload%2F%40webassemblyjs%2Fast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"
@@ -1570,6 +1590,11 @@ call-bind@^1.0.2:
   dependencies:
     function-bind "^1.1.1"
     get-intrinsic "^1.0.2"
+
+callsite@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npm.taobao.org/callsite/download/callsite-1.0.0.tgz#280398e5d664bd74038b6f0905153e6e8af1bc20"
+  integrity sha1-KAOY5dZkvXQDi28JBRU+borxvCA=
 
 callsites@^3.0.0:
   version "3.1.0"
@@ -2110,6 +2135,13 @@ debug@~3.1.0:
   integrity sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
   dependencies:
     ms "2.0.0"
+
+decache@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.nlark.com/decache/download/decache-4.6.0.tgz#87026bc6e696759e82d57a3841c4e251a30356e8"
+  integrity sha1-hwJrxuaWdZ6C1Xo4QcTiUaMDVug=
+  dependencies:
+    callsite "^1.0.0"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
@@ -2813,6 +2845,14 @@ file-entry-cache@^6.0.1:
   dependencies:
     flat-cache "^3.0.4"
 
+file-loader@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.npm.taobao.org/file-loader/download/file-loader-6.2.0.tgz#baef7cf8e1840df325e4390b4484879480eebe4d"
+  integrity sha1-uu98+OGEDfMl5DkLRISHlIDuvk0=
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^3.0.0"
+
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.nlark.com/fill-range/download/fill-range-7.0.1.tgz"
@@ -2833,7 +2873,7 @@ finalhandler@~1.1.2:
     statuses "~1.5.0"
     unpipe "~1.0.0"
 
-find-cache-dir@^3.0.0:
+find-cache-dir@^3.0.0, find-cache-dir@^3.3.2:
   version "3.3.2"
   resolved "https://registry.nlark.com/find-cache-dir/download/find-cache-dir-3.3.2.tgz?cache=0&sync_timestamp=1630260806063&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffind-cache-dir%2Fdownload%2Ffind-cache-dir-3.3.2.tgz#b30c5b6eff0730731aea9bbd9dbecbd80256d64b"
   integrity sha1-swxbbv8HMHMa6pu9nb7L2AJW1ks=
@@ -2973,7 +3013,7 @@ glob-to-regexp@^0.4.1:
   resolved "https://registry.npm.taobao.org/glob-to-regexp/download/glob-to-regexp-0.4.1.tgz#c75297087c851b9a578bd217dd59a92f59fe546e"
   integrity sha1-x1KXCHyFG5pXi9IX3VmpL1n+VG4=
 
-glob@^7.1.3, glob@^7.1.6:
+glob@^7.0.0, glob@^7.1.3, glob@^7.1.6:
   version "7.2.0"
   resolved "https://registry.npmmirror.com/glob/download/glob-7.2.0.tgz"
   integrity sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=
@@ -3278,6 +3318,11 @@ internal-ip@^6.2.0:
     ipaddr.js "^1.9.1"
     is-ip "^3.1.0"
     p-event "^4.2.0"
+
+interpret@^1.0.0:
+  version "1.4.0"
+  resolved "https://registry.npm.taobao.org/interpret/download/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
+  integrity sha1-Zlq4vE2iendKQFhOgS4+D6RbGh4=
 
 ip-regex@^4.0.0:
   version "4.3.0"
@@ -3886,11 +3931,6 @@ minipass@^3.1.1:
   dependencies:
     yallist "^4.0.0"
 
-mitt@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.nlark.com/mitt/download/mitt-3.0.0.tgz#69ef9bd5c80ff6f57473e8d89326d01c414be0bd"
-  integrity sha1-ae+b1cgP9vV0c+jYkybQHEFL4L0=
-
 mkdirp@^0.5.1, mkdirp@^0.5.5:
   version "0.5.5"
   resolved "https://registry.nlark.com/mkdirp/download/mkdirp-0.5.5.tgz?cache=0&sync_timestamp=1621254880484&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fmkdirp%2Fdownload%2Fmkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
@@ -4069,6 +4109,14 @@ nth-check@^2.0.0:
   integrity sha1-Lv4WL1w9oGoolZ+9PbddvuqfD8I=
   dependencies:
     boolbase "^1.0.0"
+
+null-loader@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npm.taobao.org/null-loader/download/null-loader-4.0.1.tgz#8e63bd3a2dd3c64236a4679428632edd0a6dbc6a"
+  integrity sha1-jmO9Oi3TxkI2pGeUKGMu3QptvGo=
+  dependencies:
+    loader-utils "^2.0.0"
+    schema-utils "^3.0.0"
 
 object-assign@^4.0.1, object-assign@^4.1.1:
   version "4.1.1"
@@ -4850,6 +4898,11 @@ querystring@0.2.0:
   resolved "https://registry.nlark.com/querystring/download/querystring-0.2.0.tgz?cache=0&sync_timestamp=1626179435543&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fquerystring%2Fdownload%2Fquerystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
   integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
+querystring@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.nlark.com/querystring/download/querystring-0.2.1.tgz?cache=0&sync_timestamp=1626179435543&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fquerystring%2Fdownload%2Fquerystring-0.2.1.tgz#40d77615bb09d16902a85c3e38aa8b5ed761c2dd"
+  integrity sha1-QNd2FbsJ0WkCqFw+OKqLXtdhwt0=
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.nlark.com/queue-microtask/download/queue-microtask-1.2.3.tgz"
@@ -4925,6 +4978,13 @@ readdirp@~3.6.0:
   dependencies:
     picomatch "^2.2.1"
 
+rechoir@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.nlark.com/rechoir/download/rechoir-0.6.2.tgz#85204b54dba82d5742e28c96756ef43af50e3384"
+  integrity sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=
+  dependencies:
+    resolve "^1.1.6"
+
 regexp.prototype.flags@^1.2.0:
   version "1.3.1"
   resolved "https://registry.npm.taobao.org/regexp.prototype.flags/download/regexp.prototype.flags-1.3.1.tgz?cache=0&sync_timestamp=1610725711521&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fregexp.prototype.flags%2Fdownload%2Fregexp.prototype.flags-1.3.1.tgz#7ef352ae8d159e758c0eadca6f8fcb4eef07be26"
@@ -4974,7 +5034,7 @@ resolve-from@^4.0.0:
   resolved "https://registry.nlark.com/resolve-from/download/resolve-from-4.0.0.tgz"
   integrity sha1-SrzYUq0y3Xuqv+m0DgCjbbXzkuY=
 
-resolve@^1.10.0, resolve@^1.15.1, resolve@^1.20.0:
+resolve@^1.1.6, resolve@^1.10.0, resolve@^1.15.1, resolve@^1.20.0:
   version "1.20.0"
   resolved "https://registry.npm.taobao.org/resolve/download/resolve-1.20.0.tgz?cache=0&sync_timestamp=1613054862388&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fresolve%2Fdownload%2Fresolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
   integrity sha1-YpoBP7P3B1XW8LeTXMHCxTeLGXU=
@@ -5112,7 +5172,7 @@ semver@^6.0.0, semver@^6.3.0:
   resolved "https://registry.npm.taobao.org/semver/download/semver-6.3.0.tgz"
   integrity sha1-7gpkyK9ejO6mdoexM3YeG+y9HT0=
 
-semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5:
+semver@^7.1.2, semver@^7.2.1, semver@^7.3.2, semver@^7.3.4, semver@^7.3.5:
   version "7.3.5"
   resolved "https://registry.npm.taobao.org/semver/download/semver-7.3.5.tgz"
   integrity sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc=
@@ -5213,6 +5273,15 @@ shell-quote@^1.6.1:
   version "1.7.3"
   resolved "https://registry.npmmirror.com/shell-quote/download/shell-quote-1.7.3.tgz#aa40edac170445b9a431e17bb62c0b881b9c4123"
   integrity sha1-qkDtrBcERbmkMeF7tiwLiBucQSM=
+
+shelljs@^0.8.3:
+  version "0.8.4"
+  resolved "https://registry.nlark.com/shelljs/download/shelljs-0.8.4.tgz#de7684feeb767f8716b326078a8a00875890e3c2"
+  integrity sha1-3naE/ut2f4cWsyYHiooAh1iQ48I=
+  dependencies:
+    glob "^7.0.0"
+    interpret "^1.0.0"
+    rechoir "^0.6.2"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.5"
@@ -5890,6 +5959,15 @@ vscode-vue-languageservice@^0.27.0:
     vscode-pug-languageservice "^0.27.24"
     vscode-typescript-languageservice "^0.27.25"
 
+vue-cli-plugin-vuetify@~2.4.3:
+  version "2.4.3"
+  resolved "https://registry.npmmirror.com/vue-cli-plugin-vuetify/download/vue-cli-plugin-vuetify-2.4.3.tgz#68a893642b354ed8d534e4a9bc63d0728a8987ac"
+  integrity sha1-aKiTZCs1TtjVNOSpvGPQcoqJh6w=
+  dependencies:
+    null-loader "^4.0.1"
+    semver "^7.1.2"
+    shelljs "^0.8.3"
+
 vue-eslint-parser@^7.10.0:
   version "7.11.0"
   resolved "https://registry.npmmirror.com/vue-eslint-parser/download/vue-eslint-parser-7.11.0.tgz?cache=0&sync_timestamp=1634603045111&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fvue-eslint-parser%2Fdownload%2Fvue-eslint-parser-7.11.0.tgz"
@@ -5965,6 +6043,25 @@ vue@^3.2.16:
     "@vue/server-renderer" "3.2.20"
     "@vue/shared" "3.2.20"
 
+vuetify-loader@^2.0.0-alpha.0:
+  version "2.0.0-alpha.5"
+  resolved "https://registry.npmmirror.com/vuetify-loader/download/vuetify-loader-2.0.0-alpha.5.tgz#02bded6a01c24f8661957f7f811b264c3edc5f9b"
+  integrity sha1-Ar3tagHCT4ZhlX9/gRsmTD7cX5s=
+  dependencies:
+    "@vuetify/loader-shared" "^1.1.3"
+    decache "^4.6.0"
+    file-loader "^6.2.0"
+    find-cache-dir "^3.3.2"
+    loader-utils "^2.0.0"
+    null-loader "^4.0.1"
+    querystring "^0.2.1"
+    upath "^2.0.1"
+
+vuetify@^3.0.0-alpha.0:
+  version "3.0.0-alpha.11"
+  resolved "https://registry.npmmirror.com/vuetify/download/vuetify-3.0.0-alpha.11.tgz#927a46feda8ca36f1616dadb125ee09107f31fd8"
+  integrity sha1-knpG/tqMo28WFtrbEl7gkQfzH9g=
+
 vuex@^4.0.2:
   version "4.0.2"
   resolved "https://registry.nlark.com/vuex/download/vuex-4.0.2.tgz?cache=0&sync_timestamp=1623945192157&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvuex%2Fdownload%2Fvuex-4.0.2.tgz"
@@ -5993,6 +6090,11 @@ wcwidth@^1.0.1:
   integrity sha1-8LDc+RW8X/FSivrbLA4XtTLaL+g=
   dependencies:
     defaults "^1.0.3"
+
+webfontloader@^1.0.0:
+  version "1.6.28"
+  resolved "https://registry.nlark.com/webfontloader/download/webfontloader-1.6.28.tgz#db786129253cb6e8eae54c2fb05f870af6675bae"
+  integrity sha1-23hhKSU8tujq5UwvsF+HCvZnW64=
 
 webidl-conversions@^3.0.0:
   version "3.0.1"

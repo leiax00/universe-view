@@ -1,9 +1,9 @@
 <template>
   <div class="home-main">
     Home - main
-    <button>
+    <v-btn block>
       Block Button
-    </button>
+    </v-btn>
   </div>
 </template>
 

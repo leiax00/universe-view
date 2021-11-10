@@ -1,5 +1,5 @@
 <template>
-  <div class="uv-header d-flex align-center flex-grow-1">
+  <v-container class="uv-header">
     <div class="uv-logo">LOGO</div>
     <div class="uv-head-nav">
       <router-link v-for="(item, index) in headers" :key="index" :to="item.path"
@@ -8,7 +8,7 @@
       </router-link>
     </div>
     <div class="uv-head-right">RIGHT NAV</div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -25,8 +25,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use "~@/styles/mixins.scss" as mixins;
 
 .uv-header {
+  @include mixins.container;
   height: 4.5rem;
   .uv-logo {}
   .uv-head-nav {
