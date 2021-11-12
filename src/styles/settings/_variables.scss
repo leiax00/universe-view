@@ -6,42 +6,11 @@
 $color-pack: true !default;
 $reset: true !default;
 
-$body-font-family: 'Roboto', sans-serif !default;
-$font-size-root: 1rem !default;
-$line-height-root: 1.5 !default;
 $border-color-root: rgba(var(--v-border-color), var(--v-border-opacity)) !default;
 $border-radius-root: 4px !default;
 $border-style-root: solid !default;
 
-$font-weights: () !default;
-$font-weights: map-deep-merge(
-  (
-    'thin': 100,
-    'light': 300,
-    'regular': 400,
-    'medium': 500,
-    'bold': 700,
-    'black': 900
-  ),
-  $font-weights
-);
 
-$heading-font-family: $body-font-family !default;
-
-$typography: () !default;
-$typography: map-deep-merge(
-  (
-    'h1': (
-      'size': 6rem,
-      'weight': 300,
-      'line-height': 6rem,
-      'letter-spacing': -.015625em,
-      'font-family': $heading-font-family,
-      'text-transform': none
-    )
-  ),
-  $typography
-);
 
 
 // Mapping from transition to easings:

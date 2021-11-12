@@ -26,6 +26,7 @@ rules:
   no-unsafe-finally: error
   block-scoped-var: error
   default-case: error
+  no-undef: off
   dot-location:
     - error
     - property

@@ -1,0 +1,18 @@
+@mixin position($position: absolute, $top: 0, $left: 0, $width: 100%, $height: 100%, $content: '' ) {
+  content: $content;
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+  @if($height != -1) {
+    height: $height;
+  }
+}
+
+@mixin p_absolute($position: absolute, $top: 0, $left: 0, $width: 100%, $height: -1, $content: '' ) {
+  @include position($position, $top, $left, $width, $height, $content)
+}
+
+@mixin p_fixed($position: fixed, $top: 0, $left: 0, $width: 100%, $height: -1, $content: '' ) {
+  @include position($position, $top, $left, $width, $height, $content)
+}

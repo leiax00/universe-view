@@ -9,6 +9,10 @@ app:
   cute:
     textures: 0
     model: 4
+  srcCdn:
+    base: https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static
+    opts:
+      pic: img
 header:
   menu:
     - name: 'title.home'
@@ -36,8 +40,11 @@ define:
       vars:
         --v-theme-color: '#e0e0e0'
         --v-theme-background: '#2f2f2f'
+        --v-theme-header-image: url(https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static/img/lml_bg.jpg)
         --v-theme-margin: 1rem
         --v-theme-padding: 1rem
+        --v-theme-nav-height: 4rem
+        --v-theme-base-font-size: 0.75rem
       responsive:
         xs:
           min: 0

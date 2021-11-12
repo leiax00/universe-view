@@ -1,0 +1,44 @@
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
+@use '../tools/functions' as *;
+
+$body-font-family: 'Consolas', sans-serif !default;
+$font-size-root: 1rem !default;
+$line-height-root: 1.5 !default;
+$base-font-size: var(--v-theme-base-font-size);
+
+$font-weights: () !default;
+$font-weights: map-deep-merge(
+    (
+      'thin': 100,
+      'light': 300,
+      'regular': 400,
+      'medium': 500,
+      'bold': 700,
+      'black': 900
+    ),
+    $font-weights
+);
+
+$size-list: () !default;
+@if (meta.type-of($size-list) == list) {
+  @for $i from 0 through 36 {
+    $spacers: map.merge($size-list, (12 + 2 * $i: calc(#{$base-font-size} + 0.125 * #{$i})))
+  }
+}
+
+$font-list: () !default;
+$font-list: map-deep-merge(
+    (
+      'l-20': (
+        'size': map.get($size-list, 20),
+        'weight': map.get($font-weights, 'light'),
+        'line-height': $line-height-root,
+        'letter-spacing': -.015625em,
+        'font-family': $body-font-family,
+        'text-transform': none
+      ),
+    ),
+    $font-list
+);

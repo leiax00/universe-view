@@ -23,6 +23,5 @@ export default {
   min-height: 100vh;
   background-color: var(--v-theme-background);
   color: var(--v-theme-color);
-  padding: 0 var(--v-theme-padding);
 }
 </style>

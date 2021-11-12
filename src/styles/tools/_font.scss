@@ -1,0 +1,35 @@
+@use 'sass:map';
+@use "../settings";
+@mixin font-style(
+  $font-size: inherit,
+  $font-weight: inherit,
+  $color: inherit,
+  $line-height:inherit,
+  $spacing: inherit,
+  $text-transform: inherit,
+  $font-family: inherit
+) {
+  font-family: $font-family !important;
+  font-size: $font-size !important;
+  @if(map.get(settings.$font-weights, $font-weight)) {
+    font-weight: map.get(settings.$font-weights, $font-weight) !important;
+  } @else {
+    font-weight: $font-weight !important;
+  }
+  line-height: $line-height !important;
+  color: $color;
+  letter-spacing: $spacing;
+  text-transform: $text-transform;
+}
+
+@mixin font-style-root() {
+  @include font-style(
+      settings.$font-size-root,
+      map.get(settings.$font-weights, light),
+      var(--v-theme-color),
+      settings.$line-height-root,
+      normal,
+      none,
+      settings.$body-font-family
+  )
+}
