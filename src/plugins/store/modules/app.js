@@ -8,6 +8,9 @@ const state = {
   auth: {
     token: '',
     user: {}
+  },
+  headerCtl: {
+    showArticle: false
   }
 }
 
@@ -24,7 +27,8 @@ const getters = {
     // todo: 根据用户角色的变化进行设置该值
     return true
   },
-  auth: state => state.auth
+  auth: state => state.auth,
+  headerCtl: state => state.headerCtl
 }
 
 export default {

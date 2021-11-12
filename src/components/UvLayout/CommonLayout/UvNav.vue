@@ -55,11 +55,12 @@ $nav-h: var(--v-theme-nav-height);
   @include tools.p_fixed($height: $nav-h);
   @include tools.font-style($font-weight:'bold');
   padding: 0 var(--v-theme-padding);
+  z-index: 1;
   &.fixed-top {
     top: calc(#{$nav-h} * -1);
   }
   &.with-bg {
-    background-color: #39656b;
+    background-color: var(--v-theme-nav-bgc);
   }
 
   .uv-head-nav {

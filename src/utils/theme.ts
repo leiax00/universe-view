@@ -256,6 +256,10 @@ export class ThemeManager {
     return ''
   }
 
+  public getVarItem(key: string): string {
+    return this.current.vars[key]
+  }
+
 }
 
 export const themeManager = new ThemeManager({})

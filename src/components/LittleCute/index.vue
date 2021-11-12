@@ -200,7 +200,7 @@ export default {
   bottom: 0;
   line-height: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
 }
 
 #waifu-tips {

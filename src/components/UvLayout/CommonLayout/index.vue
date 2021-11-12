@@ -1,9 +1,7 @@
 <template>
   <div class="common-layout">
     <uv-nav />
-    <div class="layout-header">
-      <uv-header/>
-    </div>
+    <uv-header/>
     <div class="layout-content">
       <router-view/>
     </div>
@@ -25,9 +23,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.layout-header {
-  padding-top: var(--v-theme-nav-height);
-}
 .layout-content {
   height: 1500px;
 }
