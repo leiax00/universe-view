@@ -1,9 +1,7 @@
 <template>
   <a-row class="uv-header" type="flex" justify="center">
     <a-col class="title-detail">
-      <uv-title>
-        <article-title v-if="headerCtl.showArticle"/>
-      </uv-title>
+      <uv-title />
     </a-col>
     <a-col :span="24">
       <wave />
@@ -14,18 +12,14 @@
 <script>
 
 import UvTitle from '@/components/basic/UvTitle'
-import ArticleTitle from '@/components/basic/UvTitle/ArticleTitle'
 import Wave from '@/components/basic/animations/Wave'
 
 export default {
   name: 'UvHeader',
-  components: { Wave, ArticleTitle, UvTitle },
+  components: { Wave, UvTitle },
   computed: {
     headers() {
       return this.$store.getters.settings.header.menu
-    },
-    headerCtl() {
-      return this.$store.getters['app/headerCtl']
     }
   }
 

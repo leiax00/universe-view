@@ -40,7 +40,7 @@ define:
       vars:
         --v-theme-color: '#e0e0e0'
         --v-theme-background: '#2f2f2f'
-        --v-theme-header-image: url(https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static/img/load-1636598186726.png)
+        --v-theme-header-image: url(https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static/img/bg-load.png)
         --v-theme-margin: 1rem
         --v-theme-padding: 1rem
         --v-theme-nav-height: 4rem

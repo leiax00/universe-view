@@ -6,10 +6,17 @@
 </template>
 
 <script type="text/tsx">
-import CommonLayout from './CommonLayout/index.vue'
+import CommonLayout from './CommonLayout'
+import LittleCute from '../LittleCute'
+import Sidecar from 'gitter-sidecar/dist/sidecar-module'
 export default {
   name: 'UvLayout',
-  components: { CommonLayout },
+  components: { LittleCute, CommonLayout },
+  setup() {
+    new Sidecar({
+      room: 'exploding-universe/universe'
+    })
+  }
 }
 </script>
 

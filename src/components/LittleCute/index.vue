@@ -196,7 +196,7 @@ export default {
 <style scoped="scoped">
 
 #waifu {
-  right: 0.75rem;
+  left: 0;
   bottom: 0;
   line-height: 0;
   position: fixed;

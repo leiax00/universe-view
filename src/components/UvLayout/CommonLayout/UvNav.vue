@@ -1,6 +1,8 @@
 <template>
-  <a-row :class="clazz" type="flex" align="middle">
-    <a-col flex="0 1 100px" class="uv-logo">LOGO</a-col>
+  <a-row :class="clazz" type="flex" align="middle" :gutter="24">
+    <a-col flex="0 1 100px" class="uv-logo">
+      <a class="nav-item" href="/"><img :src="logoUrl" alt="Simple Zero" height="28"></a>
+    </a-col>
     <a-col flex="auto" class="uv-head-nav">
       <router-link v-for="(item, index) in headers" :key="index" :to="item.path"
                    class="route-item text-teal-lighten-1">
@@ -28,6 +30,10 @@ export default {
     },
     headers() {
       return this.$store.getters.settings.header.menu
+    },
+    logoUrl() {
+      const { base, opts } = this.$store.getters.settings.app.srcCdn
+      return `${base}/${opts.pic}/logo-simple_zero.png`
     }
   },
   setup() {
