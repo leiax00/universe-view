@@ -25,5 +25,7 @@ export default {
 <style lang="scss" scoped>
 .layout-content {
   height: 1500px;
+  width: 70%;
+  margin: var(--v-theme-margin) auto;
 }
 </style>

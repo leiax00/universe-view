@@ -202,6 +202,11 @@ export default {
   position: fixed;
   z-index: 1000;
 }
+@media (max-width: 768px) {
+  #waifu {
+    display: none;
+  }
+}
 
 #waifu-tips {
   animation: shake 50s ease-in-out 5s infinite;
