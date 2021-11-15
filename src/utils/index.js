@@ -27,3 +27,14 @@ export function kvObject2UriParam(paramObj) {
     return `${k}=${encodeURIComponent(v)}`
   }).join('&')
 }
+
+export function startInterval(func, timeRound) {
+  func()
+  return setInterval(func, timeRound)
+}
+
+export function stopInterval(timer) {
+  if (timer) {
+    clearInterval(timer)
+  }
+}

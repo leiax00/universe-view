@@ -10,3 +10,8 @@ title:
   thoughts: 碎碎念
   message: 留言
   about: 关于
+footer:
+  copyright: Lei.AoX Powered by JcTec
+  statement: 版权说明：[本网站所有内容均收集于互联网或自己创作,方便于网友与自己学习交流，如有侵权，请留言，立即处理]
+  runInfo: 本站自 {time} 已运行 {day} 天 {hour} 小时 {minute} 分 {second} 秒!
+  thanks: 感谢小伙伴的光临!

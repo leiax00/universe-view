@@ -1,6 +1,6 @@
 <template>
   <div class="common-layout">
-    <uv-nav />
+    <uv-nav/>
     <uv-header/>
     <div class="layout-content">
       <router-view/>
@@ -18,14 +18,42 @@ import UvNav from '@/components/UvLayout/CommonLayout/UvNav'
 
 export default {
   name: 'CommonLayout',
-  components: { UvNav, UvFooter, UvHeader }
+  components: { UvNav, UvFooter, UvHeader },
+  provide() {
+    const self = this
+    return {
+      logoUrl: function() {
+        const { base, opts } = self.$store.getters.settings.app.srcCdn
+        return `${base}/${opts.pic}/logo-simple_zero.png`
+      }()
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.layout-content {
-  height: 1500px;
-  width: 70%;
-  margin: var(--v-theme-margin) auto;
+.common-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .layout-content {
+    flex: auto;
+  }
+
+  .layout-content, .layout-footer {
+    width: 70%;
+    margin: var(--v-theme-margin) auto;
+  }
 }
+
+@media (max-width: 768px) {
+  .common-layout {
+    .layout-content, .layout-footer {
+      width: 90%;
+      margin: var(--v-theme-margin) auto;
+    }
+  }
+}
+
 </style>

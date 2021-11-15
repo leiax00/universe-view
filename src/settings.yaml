@@ -2,6 +2,7 @@ app:
   title: 'Universe-View'
   version: 'v0.0.1'
   baseUrl: ''
+  firstRun: '2021-11-15T17:00:00'
   theme:
     select: base
     needCache: true
@@ -13,6 +14,7 @@ app:
     base: https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static
     opts:
       pic: img
+  srcSvg: //at.alicdn.com/t/font_2015893_ndnkvb1p35c.js
 header:
   menu:
     - name: 'title.home'

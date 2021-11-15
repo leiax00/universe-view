@@ -31,11 +31,8 @@ export default {
     headers() {
       return this.$store.getters.settings.header.menu
     },
-    logoUrl() {
-      const { base, opts } = this.$store.getters.settings.app.srcCdn
-      return `${base}/${opts.pic}/logo-simple_zero.png`
-    }
   },
+  inject: [ 'logoUrl' ],
   setup() {
     let navState = ref({ scrollTop: 0, preScrollTop: 0 })
     const handleScroll = function() {

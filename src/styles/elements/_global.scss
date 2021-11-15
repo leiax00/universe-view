@@ -15,8 +15,9 @@ html {
 //  display: none /* Chrome Safari */
 
 
-//html.overflow-y-hidden
-//  overflow-y: hidden !important
+html.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
 
 body {
   @include tools.font-style-root

@@ -1,31 +1,63 @@
 <template>
-  <div class="uv-footer">
-    copyright
-  </div>
+  <a-row class="uv-footer">
+    <a-col :span="24">
+      <a class="nav-item" href="/"><img :src="logoUrl" alt="Simple Zero" height="28"></a>
+    </a-col>
+    <a-col :span="24">
+      <uv-icon icon-class="copyright" />
+      <span class="footer-text">{{ `${new Date().getFullYear()} ${copyright}` }}</span>
+    </a-col>
+    <a-col :span="24">
+      <uv-icon icon-class="copyright" />
+      <span class="footer-text">{{ selfCopyright }}</span>
+    </a-col>
+    <a-col :span="24">
+      <div v-if="runInfo !== ''">
+        <uv-icon icon-class="aixin-left" />
+        <span class="footer-text">{{ runInfo }}</span>
+        <uv-icon icon-class="aixin-right" />
+      </div>
+      <div>
+        <uv-icon icon-class="aixin-left" />
+        <span class="footer-text">{{ thanks }}</span>
+        <uv-icon icon-class="aixin-right" />
+      </div>
+    </a-col>
+  </a-row>
 </template>
 
 <script>
 
+import UvIcon from '@/components/basic/UvIcon'
+import timeUtils from '@/utils/timeUtils'
+import constObj from '@/utils/constObj'
+import { startInterval } from '@/utils'
 export default {
   name: 'UvFooter',
+  components: { UvIcon },
   data: function() {
     return {
-      copyright: 'Lei.AoX Powered by JcTec',
-      selfCopyright: '版权说明：[本网站所有内容均收集于互联网或自己创作,方便于网友与自己学习交流，如有侵权，请留言，立即处理]',
+      copyright: this.$t('footer.copyright'),
+      selfCopyright: this.$t('footer.statement'),
       runInfo: '',
-      thanks: '感谢小伙伴的光临!',
+      thanks: this.$t('footer.thanks'),
     }
   },
+  inject: [ 'logoUrl' ],
   created() {
     this.refreshRunInfo()
   },
   methods: {
     refreshRunInfo: function() {
-      // todo
+      const self = this
+      startInterval(()=> {
+        const diff = timeUtils.calcTimeDiff(self.$store.getters.settings.app.firstRun)
+        diff.time = self.$store.getters.settings.app.firstRun.split(/[\vt]/ig)[0]
+        self.runInfo = self.$t('footer.runInfo', diff)
+      }, constObj.TIME_UNIT.ONE_SECOND)
     },
   },
 }
 </script>
 <style lang="scss" scoped>
-
 </style>
