@@ -14,7 +14,7 @@ app:
     base: https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static
     opts:
       pic: img
-  srcSvg: //at.alicdn.com/t/font_2015893_ndnkvb1p35c.js
+  srcSvg: //at.alicdn.com/t/font_2015893_qyxz87dt3x.js
 header:
   menu:
     - name: 'title.home'
