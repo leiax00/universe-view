@@ -6,7 +6,7 @@ app:
   theme:
     select: base
     needCache: true
-#  看板娘模型选择, 参见: https://github.com/fghrsh/live2d_api
+  #  看板娘模型选择, 参见: https://github.com/fghrsh/live2d_api
   cute:
     textures: 0
     model: 4
@@ -14,6 +14,7 @@ app:
     base: https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static
     opts:
       pic: img
+  #  svg图片资源, 组件: UvIcon
   srcSvg: //at.alicdn.com/t/font_2015893_qyxz87dt3x.js
 header:
   menu:
