@@ -1,5 +1,5 @@
 <template>
-  <a-row :class="clazz" type="flex" align="middle" :gutter="24">
+  <a-row :class="clazz" type="flex" align="middle">
     <a-col flex="0 1 100px" class="uv-logo">
       <a class="nav-item" href="/"><img :src="logoUrl" alt="Simple Zero" height="28"></a>
     </a-col>
@@ -68,9 +68,7 @@ $nav-h: var(--v-theme-nav-height);
 
   .uv-head-nav {
     .route-item {
-      &+.route-item {
-        margin-left: 1.5rem;
-      }
+      margin-left: calc(var(--v-theme-margin) * 1.5);
     }
   }
 }

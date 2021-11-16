@@ -9,3 +9,9 @@ body {
     }
   }
 }
+h1, h2, h3, h4, h5, h6 {
+  color: var(--v-theme-color);
+  &:hover {
+    color: var(--v-theme-color-hover);
+  }
+}

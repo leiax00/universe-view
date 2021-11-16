@@ -26,5 +26,8 @@ export default {
       minute: minute,
       second: second,
     }
+  },
+  formatTime(time) {
+    return dayjs(time).format('YYYY-MM-DD')
   }
 }

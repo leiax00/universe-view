@@ -12,7 +12,7 @@ export default {
           'application development. It contains all the components required to develop distributed applications, ' +
           'making it easy for you to develop your applications using Spring Cloud...',
         author: `author_${page * pageSize + i + 1}`,
-        time: new Date(),
+        time: new Date().getTime(),
         tags: [ 'tag_1', 'tag_2' ],
         withBg: ''
       })

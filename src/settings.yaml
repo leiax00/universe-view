@@ -41,7 +41,7 @@ define:
   theme:
     - name: default
       vars:
-        --v-theme-color: '#e0e0e0'
+        --v-theme-color: '#bdbdbd'
         --v-theme-background: '#2f2f2f'
         --v-theme-color-border: '#505050'
         --v-theme-color-hover: '#e91e63'
