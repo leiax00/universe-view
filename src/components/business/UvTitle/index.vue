@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import UvTitleMain from '@/components/basic/UvTitle/UvTitleMain'
-import ArticleTitle from '@/components/basic/UvTitle/ArticleTitle'
+import UvTitleMain from '@/components/business/UvTitle/UvTitleMain'
+import ArticleTitle from '@/components/business/UvTitle/ArticleTitle'
 export default {
   name: 'UvTitle',
   components: { ArticleTitle, UvTitleMain },

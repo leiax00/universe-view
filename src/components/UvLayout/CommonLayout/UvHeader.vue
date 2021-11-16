@@ -11,7 +11,7 @@
 
 <script>
 
-import UvTitle from '@/components/basic/UvTitle'
+import UvTitle from '@/components/business/UvTitle'
 import Wave from '@/components/basic/animations/Wave'
 
 export default {

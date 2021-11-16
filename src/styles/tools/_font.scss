@@ -33,3 +33,7 @@
       settings.$body-font-family
   )
 }
+
+@mixin font-style-title() {
+  @include font-style(1.5rem, map.get(settings.$font-weights, 'medium'))
+}

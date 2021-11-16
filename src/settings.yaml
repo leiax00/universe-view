@@ -43,6 +43,8 @@ define:
       vars:
         --v-theme-color: '#e0e0e0'
         --v-theme-background: '#2f2f2f'
+        --v-theme-color-border: '#505050'
+        --v-theme-color-hover: '#e91e63'
         --v-theme-header-image: url(https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static/img/bg-load.png)
         --v-theme-margin: 1rem
         --v-theme-padding: 1rem

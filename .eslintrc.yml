@@ -96,7 +96,10 @@ rules:
     - error
     - code: 120
       tabWidth: 2
-  max-lines: [warn, 300]
+  max-lines:
+    - warn
+    - max: 300
+      skipBlankLines: true
   max-lines-per-function: [error, 50]
   no-lonely-if: error
   no-mixed-spaces-and-tabs: error

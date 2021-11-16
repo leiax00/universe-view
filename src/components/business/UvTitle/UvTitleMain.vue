@@ -1,8 +1,8 @@
 <template>
   <div class="title-detail-wrapper">
     <slot>
-      <h1>Simple Zero</h1>
-      <div class="sub-title">Everything will be better</div>
+      <h1 class="text-h1">Simple Zero</h1>
+      <div class="sub-title text-h4">Everything will be better</div>
     </slot>
   </div>
 </template>
