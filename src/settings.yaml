@@ -20,22 +20,24 @@ header:
   menu:
     - name: 'title.home'
       path: /index
-    - name: 'title.archive'
-      path: /hello
-    - name: 'title.classify'
-      path: /
-    - name: 'title.tag'
-      path: /
-    - name: 'title.audio'
-      path: /
-    - name: 'title.photo'
-      path: /
-    - name: 'title.thoughts'
-      path: /
-    - name: 'title.message'
-      path: /
-    - name: 'title.about'
-      path: /
+    - name: 'title.note'
+      path: /note
+#    - name: 'title.archive'
+#      path: /hello
+#    - name: 'title.classify'
+#      path: /
+#    - name: 'title.tag'
+#      path: /
+#    - name: 'title.audio'
+#      path: /
+#    - name: 'title.photo'
+#      path: /
+#    - name: 'title.thoughts'
+#      path: /
+#    - name: 'title.message'
+#      path: /
+#    - name: 'title.about'
+#      path: /
 
 define:
   theme:

@@ -9,6 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@notionhq/client": "^0.4.9",
     "ant-design-vue": "^3.0.0-alpha.9",
     "axios": "^0.24.0",
     "dayjs": "^1.10.7",
