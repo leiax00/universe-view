@@ -10,9 +10,9 @@ pipeline {
     stage('Build') {
       steps{
         echo '='*50 + '更新依赖包' + '='*50
-        sh yarn install
+        yarn install
         echo '='*50 + '开始构建' + '='*50
-        sh yarn build:prod
+        yarn build:prod
         echo 'build success!'
       }
     }
