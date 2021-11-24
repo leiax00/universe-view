@@ -6,13 +6,16 @@ pipeline {
 //     http_proxy=$http_proxy
 //   }
   //默认命令运行的pwd 为项目workspace
+  tools {
+    node 'node_js'
+  }
   stages {
     stage('Build') {
       steps{
         echo '='*50 + '更新依赖包' + '='*50
-        yarn install
+        sh 'yarn install'
         echo '='*50 + '开始构建' + '='*50
-        yarn build:prod
+        sh 'yarn build:prod'
         echo 'build success!'
       }
     }
