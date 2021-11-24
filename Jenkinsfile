@@ -2,9 +2,9 @@
 pipeline {
   agent any
   // 设置环境变量
-  environment {
+//   environment {
 //     http_proxy=$http_proxy
-  }
+//   }
   //默认命令运行的pwd 为项目workspace
   stages {
     stage('Build') {
