@@ -7,7 +7,7 @@ pipeline {
 //   }
   //默认命令运行的pwd 为项目workspace
   tools {
-    node 'node_js'
+    nodejs 'node_js'
   }
   stages {
     stage('Build') {
