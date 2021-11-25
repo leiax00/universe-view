@@ -1,4 +1,12 @@
 .gitter-open-chat-button{
+  background-color: #26a69a;
+  border-color: #26a69a;
+  color: #eeeeee;
   width: 5.25rem;
   padding: 0.25rem;
+  &:hover {
+    background-color: #26a69a;
+    border-color: #26a69a;
+    color: #eeeeee;
+  }
 }

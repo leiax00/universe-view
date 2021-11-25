@@ -44,3 +44,7 @@ export function getRgbNumList(color) {
   }
   return colorChange
 }
+
+export function hex2Rgba(hex, transparency=1) {
+  return `rgba(${getRgbNumList(hex).join(',')},${transparency})`
+}

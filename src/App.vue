@@ -6,6 +6,7 @@
 <script>
 import { computed } from 'vue'
 import store from '@/plugins/store'
+import colorUtils from '@/utils/colors'
 
 export default {
   name: 'App',
@@ -14,6 +15,11 @@ export default {
     const appClazz = computed(() => `uv-app ${themeManager.value.getClass().join(' ')}`)
     themeManager.value.applyTheme()
     return { themeManager, appClazz }
+  },
+  provide() {
+    return {
+      colors: colorUtils
+    }
   }
 }
 </script>
