@@ -36,8 +36,8 @@ export default {
       let left = event.clientX - this.$el.getBoundingClientRect().left - mask.offsetWidth / 2 + 'px'
       let top = event.clientY - this.$el.getBoundingClientRect().top - mask.offsetHeight / 2 + 'px'
       mask.classList.remove('drop')
-      mask.style.left=left
-      mask.style.top=top
+      mask.style.left = left
+      mask.style.top = top
       setTimeout(function() {
         mask.classList.add('drop')
       }, 0)
@@ -47,7 +47,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @keyframes button-ripple {
   from {
     transform: scale(0);
