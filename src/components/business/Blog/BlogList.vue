@@ -38,11 +38,5 @@ export default {
   & > div + div {
     margin-top: var(--v-theme-margin);
   }
-
-  .pagination-group {
-    .page-btn {
-      width: 150px
-    }
-  }
 }
 </style>

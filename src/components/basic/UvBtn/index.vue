@@ -7,35 +7,25 @@
 </template>
 
 <script>
-import colors from '@/utils/colors'
-import { hex2Rgba } from '@/utils/colorUtils'
+import { ColorObj } from '@/components/basic/UvBtn/uvBtn'
 
 export default {
   name: 'UvBtn',
   props: {
-    color: {
-      type: String,
-      default: colors.grey.lighten3
+    colorOpts: {
+      type: ColorObj,
+      default: () => new ColorObj()
     },
-    bgColor: {
-      type: String,
-      default: colors.teal.lighten1
-    },
-    rippleColor: {
-      type: String,
-      default: colors.grey.darken3
-    }
-  },
-  computed: {
-    rippleRgba() {
-      return hex2Rgba(this.rippleColor, 0.4)
+    width: {
+      type: [ String, Number ],
+      default: 150
     }
   },
   data() {
     return {
       rippleStyle: {
-        width: '100%',
-        height: '100%'
+        width: `${this.width}px`,
+        height: `${this.width}px`
       }
     }
   },
@@ -71,9 +61,10 @@ export default {
 }
 
 .uv-btn {
-  background-color: v-bind(bgColor);
-  border-color: v-bind(bgColor);
-  color: v-bind(color);
+  background-color: v-bind('colorOpts.bgc');
+  border-color: v-bind('colorOpts.bgc');
+  color: v-bind('colorOpts.color');
+  width: v-bind('rippleStyle.width');
 
   position: relative;
   transition: background-color 200ms;
@@ -84,7 +75,7 @@ export default {
     position: absolute;
     border-radius: 100%;
     //background-color: #C9C6C672;
-    background-color: v-bind(rippleRgba);
+    background-color: v-bind('colorOpts.rgbaRippleC');
     transform: scale(0);
     z-index: 1;
 

@@ -1,3 +1,5 @@
+export * from './useRender'
+
 export function getTitle(title) {
   if (isEmptyStr(title)) {
     return import.meta.env.VITE_APP_TITLE
