@@ -59,12 +59,18 @@ export default {
   }
 }
 
-.uv-btn {
+.uv-btn, .uv-btn:hover, .uv-btn:focus {
   background-color: v-bind('colorOpts.bgc');
   border-color: v-bind('colorOpts.bgc');
   color: v-bind('colorOpts.color');
   width: v-bind('rippleStyle.width');
+  .mask {
+    //background-color: #C9C6C672;
+    background-color: v-bind('colorOpts.rgbaRippleC');
+  }
+}
 
+.uv-btn {
   position: relative;
   transition: background-color 200ms;
   cursor: pointer;
@@ -73,8 +79,6 @@ export default {
   .mask {
     position: absolute;
     border-radius: 100%;
-    //background-color: #C9C6C672;
-    background-color: v-bind('colorOpts.rgbaRippleC');
     transform: scale(0);
     z-index: 1;
 

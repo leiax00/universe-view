@@ -2,8 +2,8 @@
   "name": "universe-view",
   "version": "v0.0.1",
   "scripts": {
-    "start": "vite --host",
-    "start:prod": "vite --mode=production --host",
+    "start": "vite",
+    "start:prod": "vite --mode=production",
     "build": "vite build",
     "build:prod": "vite build --mode=production",
     "serve": "vite preview"
