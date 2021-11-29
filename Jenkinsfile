@@ -23,7 +23,7 @@ pipeline {
       steps{
         echo 'This is a deploy step'
         sh 'docker build -t leiax00/universe-view:latest .'
-        sh "docker rm $(docker ps -a |grep universe-view |awk '{print $1}')"
+        sh "docker rm $(docker ps -a |grep universe-view |awk '{print \$1}')"
         sh 'docker run -p 80:80 -d leiax00/universe-view'
       }
     }
