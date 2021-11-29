@@ -17,11 +17,11 @@
         <span class="footer-text">{{ runInfo }}</span>
         <uv-icon icon-class="aixin-right" />
       </div>
-      <div>
-        <uv-icon icon-class="aixin-left" />
-        <span class="footer-text">{{ thanks }}</span>
-        <uv-icon icon-class="aixin-right" />
-      </div>
+    </a-col>
+    <a-col v-if="record" :span="24">
+      <uv-icon icon-class="aixin-left" />
+      <a href="https://beian.miit.gov.cn/" target="_blank">{{ record }}</a>
+      <uv-icon icon-class="aixin-right" />
     </a-col>
   </a-row>
 </template>
@@ -35,6 +35,11 @@ import { startInterval } from '@/utils'
 export default {
   name: 'UvFooter',
   components: { UvIcon },
+  computed: {
+    record() {
+      return this.$store.getters.settings.app.copyright || ''
+    }
+  },
   data: function() {
     return {
       copyright: this.$t('footer.copyright'),

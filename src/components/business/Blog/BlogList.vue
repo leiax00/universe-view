@@ -1,7 +1,7 @@
 <template>
   <div class="blog-list">
     <blog-item v-for="(item, index) in blogList" :key="index" :blog-info="item"/>
-    <a-row type="flex" justify="space-between" class="pagination-group">
+    <a-row v-if="blogList.length !== 0" type="flex" justify="space-between" class="pagination-group">
       <a-col class="prev-page">
         <uv-btn class="page-btn">PREV PAGE</uv-btn>
       </a-col>

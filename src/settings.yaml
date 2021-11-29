@@ -3,6 +3,7 @@ app:
   version: 'v0.0.1'
   baseUrl: ''
   firstRun: '2021-11-15T17:00:00'
+  copyright: 蜀ICP备2020031548号-1
   theme:
     select: base
     needCache: true
