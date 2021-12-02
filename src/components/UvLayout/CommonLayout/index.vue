@@ -15,6 +15,7 @@
 import UvHeader from '@/components/UvLayout/CommonLayout/UvHeader'
 import UvFooter from '@/components/UvLayout/CommonLayout/UvFooter'
 import UvNav from '@/components/UvLayout/CommonLayout/UvNav'
+import { isEmptyStr } from '@/utils'
 
 export default {
   name: 'CommonLayout',
@@ -24,6 +25,9 @@ export default {
     return {
       logoUrl: function() {
         const { base, opts } = self.$store.getters.settings.app.srcCdn
+        if (isEmptyStr(opts.pic) || opts.pic.trim() === '/') {
+          return `${base}/logo-simple_zero.png`
+        }
         return `${base}/${opts.pic}/logo-simple_zero.png`
       }()
     }

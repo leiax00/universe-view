@@ -12,9 +12,10 @@ app:
     textures: 0
     model: 4
   srcCdn:
-    base: https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static
+#    base: https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static
+    base: https://cdn.leiax00.cn
     opts:
-      pic: img
+      pic: pic
   #  svg图片资源, 组件: UvIcon
   srcSvg: //at.alicdn.com/t/font_2015893_qyxz87dt3x.js
 header:
@@ -48,7 +49,7 @@ define:
         --v-theme-background: '#2f2f2f'
         --v-theme-color-border: '#505050'
         --v-theme-color-hover: '#e91e63'
-        --v-theme-header-image: url(https://cdn.jsdelivr.net/gh/leiax00/cdn-for-static/img/bg-load.png)
+        --v-theme-header-image: url(https://cdn.leiax00.cn/pic/bg-load.png)
         --v-theme-margin: 1rem
         --v-theme-padding: 1rem
         --v-theme-nav-height: 4rem
