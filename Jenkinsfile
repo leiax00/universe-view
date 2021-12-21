@@ -13,6 +13,8 @@ pipeline {
     stage('Build') {
       steps{
         echo '='*50 + '更新依赖包' + '='*50
+        sh 'yarn config list'
+//         sh 'yarn config set registry https://registry.npm.taobao.org'
         sh 'yarn install'
         echo '='*50 + '开始构建' + '='*50
         sh 'yarn build:prod'
