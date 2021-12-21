@@ -16,7 +16,6 @@ pipeline {
     stage('Build') {
       steps{
         echo '='*50 + '更新依赖包' + '='*50
-        sh 'yarn config list'
         sh 'yarn config set registry https://registry.npm.taobao.org'
         sh 'yarn install'
         echo '='*50 + '开始构建' + '='*50
@@ -27,7 +26,7 @@ pipeline {
     stage('Deploy') {
       steps{
         echo '='*50 + '开始部署' + '='*50
-        sh 'docker build -t leiax00/universe-view:\$version .'
+        sh "docker build -t leiax00/universe-view:${version} ."
         sh "docker rm \$(docker ps -a |grep universe-view |awk '{print \$1}') -f"
         sh 'docker run -p 11080:80 -d leiax00/universe-view'
       }
