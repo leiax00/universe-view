@@ -9,6 +9,9 @@ pipeline {
   tools {
     nodejs 'node_js'
   }
+  parameters {
+    string defaultValue: 'latest', description: '本次编译的工程版本', name: 'version', trim: true
+  }
   stages {
     stage('Build') {
       steps{
@@ -24,9 +27,9 @@ pipeline {
     stage('Deploy') {
       steps{
         echo '='*50 + '开始部署' + '='*50
-        sh 'docker build -t leiax00/universe-view:latest .'
+        sh 'docker build -t leiax00/universe-view:\$version .'
         sh "docker rm \$(docker ps -a |grep universe-view |awk '{print \$1}') -f"
-        sh 'docker run -p 80:80 -d leiax00/universe-view'
+        sh 'docker run -p 11080:80 -d leiax00/universe-view'
       }
     }
   }
