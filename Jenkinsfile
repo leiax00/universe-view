@@ -15,12 +15,12 @@ pipeline {
   stages {
     stage('Build') {
       steps{
-        sh "chmod +x build.sh && ./build.sh build"
+        sh "chmod +x ./build.sh && ./build.sh build"
       }
     }
     stage('Deploy') {
       steps{
-        sh "chmod +x build.sh && ./build.sh deploy ${version}"
+        sh "chmod +x ./build.sh && ./build.sh deploy ${version}"
       }
     }
   }
