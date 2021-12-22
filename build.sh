@@ -11,7 +11,7 @@ build(){
 
 deploy(){
   docker build -t leiax00/universe-view:"$1" .
-  docekr push leiax00/universe-view:"$1"
+  docker push leiax00/universe-view:"$1"
   dockerId=$(docker ps -a |grep universe-view |awk '{print $1}')
   if [ "$dockerId" != "" ]; then
     printf "Find running container, need delete:\n%s" "$(docker ps -a |grep universe-view)"
