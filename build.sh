@@ -15,10 +15,9 @@ deploy(){
     printf "Find running container, need delete:\n%s" "$(docker ps -a |grep universe-view)"
     docker rm "$dockerId" -f
   fi
-  image=$(docker images |grep universe-view | grep "$1")
-  imageId=$($image |awk '{print $3}')
+  imageId=$(docker images |grep universe-view | grep "$1" |awk '{print $3}')
   if [ "$imageId" != "" ]; then
-    printf "Image existed, at first delete it:\n%s" "$image"
+    printf "Image existed, at first delete it:\n%s" "$(docker images |grep universe-view | grep "$1")"
     docker rmi "$imageId" -f
   fi
   docker build -t leiax00/universe-view:"$1" .
