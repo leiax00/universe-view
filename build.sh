@@ -10,13 +10,19 @@ build(){
 }
 
 deploy(){
-  docker build -t leiax00/universe-view:"$1" .
-  docker push leiax00/universe-view:"$1"
   dockerId=$(docker ps -a |grep universe-view |awk '{print $1}')
   if [ "$dockerId" != "" ]; then
     printf "Find running container, need delete:\n%s" "$(docker ps -a |grep universe-view)"
     docker rm "$dockerId" -f
   fi
+  image=$(docker images |grep universe-view | grep "$1")
+  imageId=$($image |awk '{print $3}')
+  if [ "$imageId" != "" ]; then
+    printf "Image existed, at first delete it:\n%s" "$image"
+    docker rmi "$imageId" -f
+  fi
+  docker build -t leiax00/universe-view:"$1" .
+  docker push leiax00/universe-view:"$1"
   printf ">>>>>> Start to deploy to docker:\n    "
   docker run -p 11080:80 -d leiax00/universe-view
 }
