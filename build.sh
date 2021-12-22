@@ -6,7 +6,7 @@ version=${2:-"latest"}
 build(){
   yarn config set registry https://registry.npm.taobao.org
   yarn install
-  sh 'yarn build:prod'
+  yarn build:prod
 }
 
 deploy(){
