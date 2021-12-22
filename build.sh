@@ -16,6 +16,7 @@ deploy(){
     printf "Find running container, need delete:\n%s" "$(docker ps -a |grep universe-view)"
     docker rm "$dockerId" -f
   fi
+  print "Start to deploy to docker:\n    "
   docker run -p 11080:80 -d leiax00/universe-view
 }
 
